@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio 2024</title>
+    <link rel="stylesheet" href="version 1.0.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="front-page">
+    <div class="cursor"></div>
+
+    <nav class="nav">
+        <div class="nav-content">
+            <img class="nav-logo" src="N.png" alt="">
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact-section" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+      
+    <section class="front" id="home">
+        <div class="front-content">
+            <div class="project-image"></div>
+            <!-- <h1>Creative<br>Developer</h1>
+            <p>Crafting digital experiences that blend innovation with functionality</p> -->
+        </div>
+    </section>
+
+    <section id="about" class="about-section" id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>
+                I am a creative and detail-oriented web developer with a strong background in coding, design, and problem-solving. 
+                With expertise in HTML, CSS, JavaScript, and back-end technologies, I build clean and efficient websites. 
+                My skills also extend to mobile app development and database management.
+                And I am passionate to solve Data Structures and algorithms.
+            </p>
+            <p>
+                When I'm not coding, I enjoy learning new technologies and participating in coding challenges.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="projects" id="projects">
+        <div class="projects-grid">
+            <article class="project-card">
+                <img src="project1.jpg" alt="Project 1" class="project1-image">
+                <div class="project-content">
+                    <h3 class="project-title">Digital Experience</h3>
+                    <p class="project-description">An immersive web platform that pushes the boundaries of online interaction.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <img src="project2.jpg" alt="Project 2" class="project2-image">
+                <div class="project-content">
+                    <h3 class="project-title">E-Commerce Revolution</h3>
+                    <p class="project-d escription">A next-generation shopping experience with seamless animations.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <img src="project3.jpg" alt="Project 3" class="project3-image">
+                <div class="project-content">
+                    <h3 class="project-title">Interactive Platform</h3>
+                    <p class="project-description">Engaging users through intuitive design and smooth interactions.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>Connect With Us</h2>
+                <p>Send us a message</p>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/nikitha-rajkumar-03563b313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/niki_rajkumar/profilecard/?igsh=N3g1OXdxdmhsNnR4" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/share/18kJAUPHeB/?mibextid=wwXIfr" class="facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nikitha. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const cursor = document.querySelector('.cursor');
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.querySelectorAll('a, .project-card').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                document.querySelector('.cursor').style.transform = 'translate(-50%, -50%) scale(2)';
+                document.querySelector('.cursor').style.borderColor = 'var(--accent)';
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                document.querySelector('.cursor').style.transform = 'translate(-50%, -50%) scale(1)';
+                document.querySelector('.cursor').style.borderColor = 'var(--accent)';
+            });
+        });
+    </script>
+</body>
+</html>
