@@ -118,25 +118,5 @@
     <footer>
         <p>&copy; 2024 Nikitha. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        document.addEventListener('mousemove', (e) => {
-            const cursor = document.querySelector('.cursor');
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-
-        document.querySelectorAll('a, .project-card').forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                document.querySelector('.cursor').style.transform = 'translate(-50%, -50%) scale(2)';
-                document.querySelector('.cursor').style.borderColor = 'var(--accent)';
-            });
-            
-            el.addEventListener('mouseleave', () => {
-                document.querySelector('.cursor').style.transform = 'translate(-50%, -50%) scale(1)';
-                document.querySelector('.cursor').style.borderColor = 'var(--accent)';
-            });
-        });
-    </script>
 </body>
 </html>
